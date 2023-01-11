@@ -6,9 +6,9 @@ const Intern = require('./lib/intern');
 const fs = require('fs');
 const path = require('path'); //allows me to link in a different directory
 const template = require('./src/template');
-const managers = [];
-const engineers = [];
-const interns = [];
+const managersArr = [];
+const engineersArr = [];
+const internsArr = [];
 
 
 const mgrQuestions = [
@@ -88,17 +88,52 @@ const engQuestions = [
             }}},
 ];
 const intQuestions = [
-    {
-        name: 'intName',
+    {   name: 'intName',
         type: 'input',
         message: 'What is the interns name?',
-        validate: (value)
-    }
-
-
-
-
-
-
-
-]
+        validate: (value) => {
+            if(value) {
+                return true;
+            } else {
+                return 'Please enter a name for intern role.'
+            }}},
+    {   name: 'intID',
+        type: 'input',
+        message: 'What is the interns ID #?',
+        validate: (value) => {
+            if(value) {
+                return true;
+            } else {
+                return 'ID # require. Please enter ID #.'
+            }}},
+    {   name: 'intEmail',
+        type: 'input',
+        message: 'What is the interns email?',
+        validate: (value) => {
+            if(value) {
+                return true;
+            } else {
+                return 'Email REQUIRED. Please provide an email.'
+            }}},
+    {   name: 'intSchool',
+        type: 'input',
+        message: 'What school is the intern associated with?',
+        validate: (value) => {
+            if(value) {
+                return true;
+            } else {
+                return 'School name is REQUIRED.'
+            }}},
+];
+const addIntorEng = [
+    {   name: 'additional',
+        type: 'list',
+        message: 'Would you like to add another role?',
+        choices: ['Add intern', 'Add Engineer', 'Complete my team'],
+        validate: (value) => {
+            if(value) {
+                return true;
+            } else {
+                return 'You MUST select one option.'
+            }}},
+];
