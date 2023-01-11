@@ -1,15 +1,61 @@
+/* Global */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* header */
 header {
-    background-color: blue;
-    width:100%;
-    height: 100px;
+    background-color: lightblue;
+    width: 100%;
+    height:200px;
 }
 
-#myTeam {
-    color:red;
-    
+h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 70px;
 }
+/* header */
+
+/* allocation of elements within main section */
+main {
+    margin-top: 50px;
+}
+/* allocation of elements within main section */
+
+/* Manager */
+#mgrContainer, #engContainer, #intContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#managerDiv, #engineerDiv {
+    border: 2px solid black;
+    padding:25px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px;
+    margin: 20px;
+}
+
+h2 {
+    margin-bottom:10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 1px solid black;
+}
+/* Manager */
+
+
+
+
+
+
+
