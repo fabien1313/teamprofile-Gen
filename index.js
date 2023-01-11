@@ -10,7 +10,6 @@ const managersArr = [];
 const engineersArr = [];
 const internsArr = [];
 
-
 const mgrQuestions = [
     {   name: 'mgrName',
         type: 'input',
@@ -137,3 +136,28 @@ const addIntorEng = [
                 return 'You MUST select one option.'
             }}},
 ];
+
+function managerRole() {
+    inquirer.prompt(mgrQuestions)
+    .then(response => {
+        const mgr = new Manager(response.mgrName, response.mgrID, response.mgrEmail, response.mgrOfficeNumber)
+        managersArr.push(mgr);
+        //insert
+    });
+};
+function engineerRole() {
+    inquirer.prompt(engQuestions)
+    .then(response => {
+        const eng = new Engineer(response.engName, response.engID, response.engEmail, response.engGitHub)
+        engineersArr.push(eng);
+        //insert
+    });
+};
+function internRole() {
+    inquirer.prompt(intQuestions)
+    .then(response => {
+        const int = new Intern(response.intName, response.inID, response.intEmail, response.intSchool)
+        internsArr.push(int);
+        //insert
+    });
+};
