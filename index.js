@@ -5,7 +5,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const fs = require('fs');
 const path = require('path'); //allows me to link in a different directory
-const template = require('./src/template');
+const dreamTeamRoster = require('./src/template');
 const managersArr = [];
 const engineersArr = [];
 const internsArr = [];
@@ -125,7 +125,7 @@ const intQuestions = [
             }}},
 ];
 const addIntorEng = [
-    {   name: 'additional',
+    {   name: 'addIntorEng',
         type: 'list',
         message: 'Would you like to add another role?',
         choices: ['Add intern', 'Add Engineer', 'Complete my team'],
@@ -166,7 +166,7 @@ function assembleMyTeam(){
         } else if (response.addIntorEng === 'Add Engineer') {
             engineerRole();
         } else {
-            fs.writeFileSync(path.join(__dirname, '/dist/DreamTeam.html'), dreamTeamRoster(managers, engineers, interns), (errors) => {
+            fs.writeFileSync(path.join(__dirname, '/dist/DreamTeam.html'), dreamTeamRoster(managersArr, engineersArr, internsArr), (errors) => {
                 if(err) {
                     console.log(err);
                 } else {

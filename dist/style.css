@@ -32,7 +32,9 @@ main {
     margin: 10px;
 }
 
-#managerDiv, #engineerDiv {
+.managerDiv, .engineerDiv, .internDiv{
+    display: flex;
+    flex-direction: column;
     border: 2px solid black;
     padding:25px;
     border-radius: 12px;
