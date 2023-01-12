@@ -44,6 +44,19 @@ function engineerHTML(engineers) {
     for (index = 0; index < engineers.length; index++) {
         engSection = engSection + buildEng(engineers[i]);
     }
-    
-}
+    function buildEng(eng) {
+        return`
+        <div id="engContainer">
+            <div class="engineerDiv">
+                <h2>${eng.getRole()}</h2>
+                <ul>
+                    <li>Name: <span>${eng.getName()}</span></li>
+                    <li>ID: <span>${eng.getId()}</span></li>
+                    <li>Email: <span>${eng.getEmail()}</span></li>
+                    <li>GitHub: <span>${eng.getGitHub()}</span></li>
+                </ul>
+            </div>
+        `
+    } return engSection;
+};
 
