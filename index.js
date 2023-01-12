@@ -174,3 +174,5 @@ function assembleMyTeam(){
                 }});
         }});
 };
+
+managerRole();
