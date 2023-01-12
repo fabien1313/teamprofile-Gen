@@ -138,26 +138,39 @@ const addIntorEng = [
 ];
 
 function managerRole() {
-    inquirer.prompt(mgrQuestions)
-    .then(response => {
+    inquirer.prompt(mgrQuestions).then(response => {
         const mgr = new Manager(response.mgrName, response.mgrID, response.mgrEmail, response.mgrOfficeNumber)
         managersArr.push(mgr);
-        //insert
+        assembleMyTeam()
     });
 };
 function engineerRole() {
-    inquirer.prompt(engQuestions)
-    .then(response => {
+    inquirer.prompt(engQuestions).then(response => {
         const eng = new Engineer(response.engName, response.engID, response.engEmail, response.engGitHub)
         engineersArr.push(eng);
-        //insert
+        assembleMyTeam()
     });
 };
 function internRole() {
-    inquirer.prompt(intQuestions)
-    .then(response => {
+    inquirer.prompt(intQuestions).then(response => {
         const int = new Intern(response.intName, response.inID, response.intEmail, response.intSchool)
         internsArr.push(int);
-        //insert
+        assembleMyTeam()
     });
+};
+function assembleMyTeam(){
+    inquirer.prompt(addIntorEng) 
+    .then(response => {
+        if(response.addIntorEng === 'Add intern') {
+            internRole();
+        } else if (response.addIntorEng === 'Add Engineer') {
+            engineerRole();
+        } else {
+            fs.writeFileSync(path.join(__dirname, '/dist/DreamTeam.html'), dreamTeamRoster(managers, engineers, interns), (errors) => {
+                if(err) {
+                    console.log(err);
+                } else {
+                    console.log('Success! You have created your Dream Team.');
+                }});
+        }});
 };
