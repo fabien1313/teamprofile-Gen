@@ -53,7 +53,7 @@ function managerHTML(managers) {
                 <ul>
                     <li>Name: <span>${mgr.getName()}</span></li>
                     <li>ID: <span>${mgr.getId()}</span></li>
-                    <li>Email: <span>${mgr.getEmail()}</span></li>
+                    <li>Email: <a href="mailto:${mgr.getEmail()}"><span>${mgr.getEmail()}</span></a></li>
                     <li>Office #: <span>${mgr.getOfficeNumber()}</span></li>
                 </ul>
             </div>`
@@ -72,7 +72,7 @@ function engineerHTML(engineers) {
                 <ul>
                     <li>Name: <span>${eng.getName()}</span></li>
                     <li>ID: <span>${eng.getId()}</span></li>
-                    <li>Email: <span>${eng.getEmail()}</span></li>
+                    <li>Email: <a href="mailto:${eng.getEmail()}"><span>${eng.getEmail()}</span></a></li>
                     <li>GitHub: <span>${eng.getGitHub()}</span></li>
                 </ul>
             </div> `
@@ -91,7 +91,7 @@ function internHTML(interns) {
                 <ul>
                     <li>Name: <span>${int.getName()}</span></li>
                     <li>ID: <span>${int.getId()}</span></li>
-                    <li>Email: <span>${int.getEmail()}</span></li>
+                    <li>Email: <a href="mailto:${int.getEmail()}"><span>${int.getEmail()}</span></a></li>
                     <li>School: <span>${int.getSchool()}</span></li>
                 </ul>
         </div>`
