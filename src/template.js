@@ -51,10 +51,10 @@ function managerHTML(managers) {
             <div class="managerDiv">
                 <h2>${mgr.getRole()}</h2>
                 <ul>
-                    <li>Name:<span>${mgr.getName()}</span></li>
-                    <li>ID:<span>${mgr.getId()}</span></li>
-                    <li>Email:<a href="mailto:${mgr.getEmail()}"><span>${mgr.getEmail()}</span></a></li>
-                    <li>Office #:<span>${mgr.getOfficeNumber()}</span></li>
+                    <li>Name: <span>${mgr.getName()}</span></li>
+                    <li>ID: <span>${mgr.getId()}</span></li>
+                    <li>Email: <a href="mailto:${mgr.getEmail()}"><span>${mgr.getEmail()}</span></a></li>
+                    <li>Office #: <span>${mgr.getOfficeNumber()}</span></li>
                 </ul>
             </div>`
     } return mgrSection;
@@ -70,10 +70,10 @@ function engineerHTML(engineers) {
             <div class="engineerDiv">
                 <h2>${eng.getRole()}</h2>
                 <ul>
-                    <li>Name:<span>${eng.getName()}</span></li>
-                    <li>ID:<span>${eng.getId()}</span></li>
-                    <li>Email:<a href="mailto:${eng.getEmail()}"><span>${eng.getEmail()}</span></a></li>
-                    <li>GitHub:<a href="https://github.com/${eng.getGitHub()}" target="_blank"<span>${eng.getGitHub()}</span></a></li>
+                    <li>Name: <span>${eng.getName()}</span></li>
+                    <li>ID: <span>${eng.getId()}</span></li>
+                    <li>Email: <a href="mailto:${eng.getEmail()}"><span>${eng.getEmail()}</span></a></li>
+                    <li>GitHub: <a href="https://github.com/${eng.getGitHub()}" target="_blank"><span>${eng.getGitHub()}</span></a></li>
                 </ul>
             </div> `
     } return engSection;
@@ -89,10 +89,10 @@ function internHTML(interns) {
         <div class="internDiv">
                 <h2>${int.getRole()}</h2>
                 <ul>
-                    <li>Name:<span>${int.getName()}</span></li>
-                    <li>ID:<span>${int.getId()}</span></li>
-                    <li>Email:<a href="mailto:${int.getEmail()}"><span>${int.getEmail()}</span></a></li>
-                    <li>School:<span>${int.getSchool()}</span></li>
+                    <li>Name: <span>${int.getName()}</span></li>
+                    <li>ID: <span>${int.getId()}</span></li>
+                    <li>Email: <a href="mailto:${int.getEmail()}"><span>${int.getEmail()}</span></a></li>
+                    <li>School: <span>${int.getSchool()}</span></li>
                 </ul>
         </div>`
     } return intSection;
