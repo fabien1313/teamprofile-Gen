@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+body {
+    background-color: beige;
+}
+
+
 /* header */
 header {
     background-color: lightblue;
@@ -13,7 +18,7 @@ header {
 
 h1 {
     position: relative;
-    color: white;
+    color: beige;
     text-align: center;
     top: 70px;
 }
@@ -40,10 +45,12 @@ main {
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px;
     margin: 20px;
+    background-color: lightblue;
 }
 
 h2 {
     margin-bottom:10px;
+    color: beige;
 }
 
 ul {
