@@ -22,6 +22,8 @@ After you have answered the prompts this program is designed to create a file an
   <hr>
 
   ## Usage
+  Walkthrough Video: https://drive.google.com/file/d/1ZinDzPSM6H4GN6LSQqdvbz_41an4GGFY/view 
+
   This program assists those needing to build a team electronically. It has a hierarchy built into it for organization purposes. The manager will appear at the top followed by the engineers and interns. This can be a powerful tool for companies with multiple teams. You can view who is in charge of what teams, the engineers and interns allocated to that specific team, and all of the information regarding their specified roles. This will assist employers and leadership in saving time as well as organization for implementing tasks and development of projects.
   <hr>
 

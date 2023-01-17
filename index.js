@@ -153,7 +153,7 @@ function engineerRole() {
 };
 function internRole() {
     inquirer.prompt(intQuestions).then(response => {
-        const int = new Intern(response.intName, response.inID, response.intEmail, response.intSchool)
+        const int = new Intern(response.intName, response.intID, response.intEmail, response.intSchool)
         internsArr.push(int);
         assembleMyTeam()
     });
